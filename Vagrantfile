@@ -3,7 +3,8 @@
 
 Vagrant.configure(2) do |config|  
   config.env.enable
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "hashicorp/precise64"  
+  config.disksize.size = "102400MB" # Bug with vagrant-disksize plugin?
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
