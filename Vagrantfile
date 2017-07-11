@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
       "url" => ENV["url"],
       "token" => ENV["token"],
       "name" => ENV["name"],
+      "tags" => ENV["tags"],
     }
   end
 end
